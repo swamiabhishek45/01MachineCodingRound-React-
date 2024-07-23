@@ -7,19 +7,19 @@ const Navbar = () => {
             <div className="container mx-auto flex justify-center items-center">
                 <div className="flex space-x-4">
                     <Link to="/" className="text-gray-300 hover:text-white">
-                        Home
+                        OTP Form
                     </Link>
                     <Link
                         to="/about"
                         className="text-gray-300 hover:text-white"
                     >
-                        About
+                        Drag & Drop Table
                     </Link>
                     <Link
                         to="/contact"
                         className="text-gray-300 hover:text-white"
                     >
-                        Contact
+                        Data Table
                     </Link>
                 </div>
             </div>
