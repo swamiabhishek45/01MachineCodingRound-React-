@@ -10,13 +10,13 @@ const Navbar = () => {
                         OTP Form
                     </Link>
                     <Link
-                        to="/about"
+                        to="/drag&drop"
                         className="text-gray-300 hover:text-white"
                     >
                         Drag & Drop Table
                     </Link>
                     <Link
-                        to="/contact"
+                        to="/datatable"
                         className="text-gray-300 hover:text-white"
                     >
                         Data Table

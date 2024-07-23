@@ -12,8 +12,8 @@ function App() {
                 <Navbar />
                 <Routes>
                     <Route path="/" exact element={<OTPForm />} />
-                    <Route path="/about" element={<DDCards />} />
-                    <Route path="/contact" element={<DataTable />} />
+                    <Route path="/drag&drop" element={<DDCards />} />
+                    <Route path="/datatable" element={<DataTable />} />
                 </Routes>
             </div>
         </Router>
