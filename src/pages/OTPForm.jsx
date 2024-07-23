@@ -12,21 +12,17 @@ const OTPForm = () => {
         newOtp[index] = e.target.value.slice(0, 1); // Only take the first character
         setOtp(newOtp);
 
+        if (e.target.value && index < otp.length - 1) {
+            inputRefs.current[index + 1].focus();
+        }
+
         if (newOtp.every((val) => val !== "")) {
             setFilled(true);
             validateOtp(newOtp);
-            inputRefs.current[index].blur();
         } else {
-            inputRefs.current[index + 1].focus();
             setFilled(false);
             setError(false);
         }
-
-        // if (index < 3) {
-        // } else {
-        //     setFilled(true);
-        //     // setError(false); // Reset error on new input
-        // }
     };
 
     const handleBackspace = (element, index) => {
@@ -120,7 +116,9 @@ const OTPForm = () => {
                         </div>
                         <h3 className="text-gray-300 text-center mt-4">
                             Didn't receive code?{" "}
-                            <span className="text-black">Resend</span>
+                            <span className="text-black cursor-pointer">
+                                Resend
+                            </span>
                         </h3>
                     </div>
                 </div>
