@@ -42,7 +42,7 @@ const CourseCard = ({
                         alt={course.title}
                         className="rounded-md w-28"
                     />
-                    <h2>{course.title}</h2>
+                    <h2 className="font-semibold">{course.title}</h2>
                 </div>
                 {/* leftbox */}
                 <div className="flex space-x-4 items-center m-4">
