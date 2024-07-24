@@ -52,8 +52,8 @@ const OTPForm = () => {
                         Mobile Phone Verification
                     </h1>
                     <p className="text-gray-500 text-center">
-                        Enter the 4-digit verification code that was
-                        sent to your phone number.
+                        Enter the 4-digit verification code that was sent to
+                        your phone number.
                     </p>
                 </div>
 
@@ -100,22 +100,22 @@ const OTPForm = () => {
                                 : "Verify Account"}
                         </button>
                     </div>
-                    <h3 className="text-gray-500 text-center mt-4">
-                        Didn't receive code?{" "}
-                        <span className="text-black cursor-pointer">
-                            Resend
-                        </span>
-                    </h3>
+                    {filled ? (
+                        " "
+                    ) : (
+                        <h3 className="text-gray-500 text-center mt-4">
+                            Didn't receive code?{" "}
+                            <span className="text-black cursor-pointer">
+                                Resend
+                            </span>
+                        </h3>
+                    )}
                 </div>
             </div>
             {/* Logo */}
             <div className="fixed right-5 bottom-5">
                 <a href="https://chaicode.com" target="_blank">
-                    <img
-                        src={Logo}
-                        alt="logo"
-                        className="w-20 rounded-md"
-                    />
+                    <img src={Logo} alt="logo" className="w-20 rounded-md" />
                 </a>
             </div>
         </div>
