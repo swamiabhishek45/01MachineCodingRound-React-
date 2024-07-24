@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { BrowserRouter as Router, Route, Routes, Navigate } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import OTPForm from "./pages/OTPForm";
 import DDCards from "./pages/DDCards";
@@ -11,9 +11,10 @@ function App() {
             <div className="App">
                 <Navbar />
                 <Routes>
-                    <Route path="/" exact element={<OTPForm />} />
-                    <Route path="/drag&drop" element={<DDCards />} />
-                    <Route path="/datatable" element={<DataTable />} />
+                    <Route path="/" element={<Navigate to="/otp-form" />} />
+                    <Route path="/otp-form" exact element={<OTPForm />} />
+                    <Route path="/course-list" element={<DDCards />} />
+                    <Route path="/batches" element={<DataTable />} />
                 </Routes>
             </div>
         </Router>

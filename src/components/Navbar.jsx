@@ -10,17 +10,17 @@ const Navbar = () => {
         <nav className="bg-gray-800 p-4">
             <div className="container mx-auto flex justify-center items-center">
                 <div className="flex space-x-4">
-                    <Link to="/" className="text-gray-300 hover:text-white">
+                    <Link to="/otp-form" className="text-gray-300 hover:text-white">
                         OTP Form
                     </Link>
                     <Link
-                        to="/drag&drop"
+                        to="/course-list"
                         className="text-gray-300 hover:text-white"
                     >
                         Drag & Drop Table
                     </Link>
                     <Link
-                        to="/datatable"
+                        to="/batches"
                         className="text-gray-300 hover:text-white"
                     >
                         Data Table

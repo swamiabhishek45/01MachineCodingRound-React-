@@ -5,7 +5,12 @@ import { FaArrowUp } from "react-icons/fa6";
 import { FaArrowDown } from "react-icons/fa6";
 import { RiDeleteBinLine } from "react-icons/ri";
 
-const CourseCard = () => {
+const CourseCard = ({
+    course,
+    moveToTop = () => {},
+    moveToBottom = () => {},
+    removeCard = () => {},
+}) => {
     const [isOpen, setIsOpen] = useState(false);
     const menuRef = useRef(null);
 
@@ -33,17 +38,17 @@ const CourseCard = () => {
                 <div className=" ml-4 flex items-center space-x-4">
                     <MdDragIndicator size="30px" color="gray" />
                     <img
-                        src="https://i.ytimg.com/vi/HbNfCM4ilBQ/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLCNC-rHrFgcViuvZrP34hwzeqGc4w"
-                        alt="img"
+                        src={course.image}
+                        alt={course.title}
                         className="rounded-md w-28"
                     />
-                    <h2>This is title</h2>
+                    <h2>{course.title}</h2>
                 </div>
                 {/* leftbox */}
                 <div className="flex space-x-4 items-center m-4">
-                    <span>Rs. 9000/-</span>
-                    <div className="bg-[#dbffcf] p-1 border rounded-md ">
-                        Mock Test
+                    <span>{course.price}</span>
+                    <div className="bg-[#dbffcf] p-1 w-24 text-center border rounded-md ">
+                        {course.label}
                     </div>
                     <div>
                         <button
@@ -60,7 +65,7 @@ const CourseCard = () => {
                     {isOpen && (
                         <div
                             ref={menuRef}
-                            className="origin-top-right absolute bottom-[-110px] right-[-160px] mt-2 w-48 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 z-10"
+                            className="origin-top-right absolute bottom-[-95px] right-[-120px] mt-2 w-40 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 z-10"
                         >
                             <div
                                 className="py-1"
@@ -68,30 +73,36 @@ const CourseCard = () => {
                                 aria-orientation="vertical"
                                 aria-labelledby="options-menu"
                             >
-                                <div className="flex items-center ml-4">
-                                    <FaArrowUp />
+                                <div className="flex items-center ml-2">
                                     <button
-                                        className="block  p-2 text-sm text-gray-700 hover:bg-gray-100 w-full text-left"
+                                        onClick={moveToTop}
+                                        className="flex  p-2 text-sm text-gray-700 hover:bg-gray-100 w-full text-left"
                                         role="menuitem"
                                     >
+                                        <FaArrowUp className="mr-2 flex" />
                                         Move To Top
                                     </button>
                                 </div>
-                                <div className="flex items-center ml-4">
-                                    <FaArrowDown />
+                                <div className="flex items-center ml-2">
                                     <button
-                                        className="block p-2 text-sm text-gray-700 hover:bg-gray-100 w-full text-left"
+                                        onClick={moveToBottom}
+                                        className="flex p-2 text-sm text-gray-700 hover:bg-gray-100 w-full text-left"
                                         role="menuitem"
                                     >
+                                        <FaArrowDown className="mr-2" />
                                         Move To Bottom
                                     </button>
                                 </div>
-                                <div className="flex items-center ml-4">
-                                    <RiDeleteBinLine color="red" />
+                                <div className="flex items-center ml-2">
                                     <button
-                                        className="block  p-2 text-sm text-gray-700 hover:bg-gray-100 w-full text-left"
+                                        onClick={removeCard}
+                                        className="flex  p-2 text-sm text-gray-700 hover:bg-gray-100 w-full text-left"
                                         role="menuitem"
                                     >
+                                        <RiDeleteBinLine
+                                            color="red"
+                                            className="mr-2"
+                                        />
                                         Remove
                                     </button>
                                 </div>
@@ -104,4 +115,4 @@ const CourseCard = () => {
     );
 };
 
-export default CourseCard;
+export default React.memo(CourseCard);
