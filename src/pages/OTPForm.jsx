@@ -41,89 +41,84 @@ const OTPForm = () => {
     };
 
     return (
-        <>
-            <div className="bg-[#4072af]">
-                <div className="h-[80.4vh] flex justify-center items-center flex-col">
-                    {/* Header  */}
-                    <h1 className="text-5xl font-bold flex justify-center mb-16">
-                        Chai aur Code
+        <div className="bg-[#4072af] min-h-screen flex justify-center items-center flex-col">
+            {/* Header */}
+            <h1 className="text-5xl font-bold text-center mb-16 text-white">
+                Chai aur Code
+            </h1>
+            <div className="bg-white w-full max-w-md rounded-lg shadow-lg p-6">
+                <div className="flex flex-col justify-center items-center py-5 px-4 gap-2">
+                    <h1 className="text-black font-bold text-2xl">
+                        Mobile Phone Verification
                     </h1>
-                    <div className="bg-white w-[500px] h-[350px] rounded-lg">
-                        <div className="flex flex-col justify-center items-center py-5 px-14 gap-2">
-                            <h1 className="text-black font-bold text-2xl">
-                                Mobile Phone Verification
-                            </h1>
-                            <p className="text-gray-300 text-center">
-                                Enter the 4-digit verification code that was
-                                sent to your phone number.
-                            </p>
-                        </div>
-
-                        {/* input boxes */}
-                        <div className="flex justify-center flex-col">
-                            <div className="flex justify-center space-x-2">
-                                {otp.map((value, index) => (
-                                    <input
-                                        key={index}
-                                        type="text"
-                                        maxLength="1"
-                                        value={value}
-                                        onChange={(e) => handleChange(e, index)}
-                                        onKeyDown={(e) =>
-                                            e.key === "Backspace" &&
-                                            handleBackspace(e.target, index)
-                                        }
-                                        ref={(el) =>
-                                            (inputRefs.current[index] = el)
-                                        }
-                                        className={`w-14 h-16 bg-[#dae2ef] text-black text-center text-2xl border-2 rounded-lg focus:outline-none ${
-                                            error
-                                                ? "border-[#eb2d5b]"
-                                                : filled
-                                                ? "border-[#23cf9b]"
-                                                : "border-[#dae2ef]"
-                                        }`}
-                                    />
-                                ))}
-                            </div>
-                            {/* verify  button */}
-                            <div className="flex justify-center">
-                                <button
-                                    className={` rounded-md mt-5 p-2 w-64 ${
-                                        error
-                                            ? "bg-[#eb2d5b]"
-                                            : filled
-                                            ? "bg-[#23cf9b]"
-                                            : "bg-[#102d4d]"
-                                    }`}
-                                >
-                                    {error
-                                        ? "Verification failed"
-                                        : filled
-                                        ? "Verified"
-                                        : "Verify Account"}
-                                </button>
-                            </div>
-                            <h3 className="text-gray-300 text-center mt-4">
-                                Didn't receive code?{" "}
-                                <span className="text-black cursor-pointer">
-                                    Resend
-                                </span>
-                            </h3>
-                        </div>
-                    </div>
+                    <p className="text-gray-500 text-center">
+                        Enter the 4-digit verification code that was
+                        sent to your phone number.
+                    </p>
                 </div>
-                <div className=" flex justify-end right-5 bottom-5 relative">
-                    <a href="https://chaicode.com" target="_blank">
-                        <img
-                            src={Logo}
-                            alt="logo"
-                            className="w-20 rounded-md"
-                        />
-                    </a>
+
+                {/* Input boxes */}
+                <div className="flex justify-center flex-col">
+                    <div className="flex justify-center space-x-2">
+                        {otp.map((value, index) => (
+                            <input
+                                key={index}
+                                type="text"
+                                maxLength="1"
+                                value={value}
+                                onChange={(e) => handleChange(e, index)}
+                                onKeyDown={(e) =>
+                                    e.key === "Backspace" &&
+                                    handleBackspace(e.target, index)
+                                }
+                                ref={(el) => (inputRefs.current[index] = el)}
+                                className={`w-14 h-16 bg-[#dae2ef] text-black text-center text-2xl border-2 rounded-lg focus:outline-none ${
+                                    error
+                                        ? "border-[#eb2d5b]"
+                                        : filled
+                                        ? "border-[#23cf9b]"
+                                        : "border-[#dae2ef]"
+                                }`}
+                            />
+                        ))}
+                    </div>
+                    {/* Verify button */}
+                    <div className="flex justify-center">
+                        <button
+                            className={`rounded-md mt-5 p-2 w-64 ${
+                                error
+                                    ? "bg-[#eb2d5b]"
+                                    : filled
+                                    ? "bg-[#23cf9b]"
+                                    : "bg-[#102d4d]"
+                            } text-white`}
+                        >
+                            {error
+                                ? "Verification failed"
+                                : filled
+                                ? "Verified"
+                                : "Verify Account"}
+                        </button>
+                    </div>
+                    <h3 className="text-gray-500 text-center mt-4">
+                        Didn't receive code?{" "}
+                        <span className="text-black cursor-pointer">
+                            Resend
+                        </span>
+                    </h3>
                 </div>
             </div>
-        </>
+            {/* Logo */}
+            <div className="fixed right-5 bottom-5">
+                <a href="https://chaicode.com" target="_blank">
+                    <img
+                        src={Logo}
+                        alt="logo"
+                        className="w-20 rounded-md"
+                    />
+                </a>
+            </div>
+        </div>
     );
 };
 
