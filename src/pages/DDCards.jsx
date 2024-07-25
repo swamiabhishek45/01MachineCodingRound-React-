@@ -50,7 +50,7 @@ const DDCards = () => {
             </h1>
             <div className="flex flex-col md:flex-row gap-10 items-center justify-center w-full px-4">
                 {/* Container */}
-                <div className="bg-white w-full max-w-6xl h-[670px] rounded-lg shadow-lg p-10 ">
+                <div className="bg-white w-full max-w-6xl h-[670px] rounded-lg shadow-lg p-10 mb-5 ">
                     <h2 className="text-2xl font-bold">Manage Bundle</h2>
                     <p className="text-[#000000a7]">
                         Change order of the products based on priority

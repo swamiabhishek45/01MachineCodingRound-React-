@@ -37,7 +37,6 @@ const PaginatedTable = () => {
     const handlePageClick = ({ selected }) => {
         setCurrentPage(selected);
     };
-
     return (
         <div className="container mx-auto ">
             <div className="flex gap-2 my-5">
@@ -79,9 +78,7 @@ const PaginatedTable = () => {
                             <td className="border-x border-black px-4 py-2">
                                 <div className="flex gap-2 items-center">
                                     <img
-                                        src={`${batch.imageUrl}id/${
-                                            index + 100
-                                        }/106/60`}
+                                        src={batch.imageUrl}
                                         alt={`img${index + 1}`}
                                         width="100px"
                                         className="rounded-md m-2"
@@ -129,7 +126,13 @@ const PaginatedTable = () => {
                     <option value={20}>20</option>
                 </select>
                 <ReactPaginate
-                    previousLabel={<FaChevronLeft size="30px" />}
+                    previousLabel={
+                        pageCount === 1 ? (
+                            <FaChevronLeft size="30px" color="gray" />
+                        ) : (
+                            <FaChevronLeft size="30px" />
+                        )
+                    }
                     nextLabel={<FaChevronRight size="30px" />}
                     // breakLabel={"..."}
                     // breakClassName={"break-me"}
@@ -140,7 +143,7 @@ const PaginatedTable = () => {
                     // containerClassName={"pagination"}
                     activeClassName={"active hidden"}
                     className="flex justify-end mt-4"
-                    renderOnZeroPageCount={null}
+                    // renderOnZeroPageCount={null}
                 />
             </div>
         </div>
