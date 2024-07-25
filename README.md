@@ -15,13 +15,13 @@ A React project with three main tasks: OTP Form, Drag and Drop Course Cards, and
 ![Verifiy](./public/images/OTPForm/img1.png)
 
 **Filling State:** The state during the input of the OTP
-![Verifiy](./public/images/OTPForm/img1.2.png)
+![Verifiy](./public/images/OTPForm/img2.png)
 
 **Filled State (Success):** The state when the OTP is correctly filled
-![Verified](./public/images/OTPForm/img2.png)
+![Verified](./public/images/OTPForm/img3.png)
 
 **Filled State (Error):** The state when the OTP is incorrectly filled
-![Verification failed](./public/images/OTPForm/img3.png)
+![Verification failed](./public/images/OTPForm/img4.png)
 
 ## 🫳🏻 Drag and Drop Cards
 

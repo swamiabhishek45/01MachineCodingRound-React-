@@ -100,7 +100,14 @@ const OTPForm = () => {
                                 : "Verify Account"}
                         </button>
                     </div>
-                    {filled ? (
+                    {error ? (
+                        <h3 className="text-gray-500 text-center mt-4">
+                            Didn't receive code?{" "}
+                            <span className="text-black cursor-pointer">
+                                Resend
+                            </span>
+                        </h3>
+                    ) : filled ? (
                         " "
                     ) : (
                         <h3 className="text-gray-500 text-center mt-4">

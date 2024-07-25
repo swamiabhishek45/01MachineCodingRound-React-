@@ -1,35 +1,35 @@
 [
     {
         "id": "1",
-        "image": "images/img1.png",
+        "image": "images/courses/img1.png",
         "title": "Interview preparation with JavaScript 2.0",
         "price": "Rs. 9000/-",
         "label": "Course"
     },
     {
         "id": "2",
-        "image": "images/img2.png",
+        "image": "images/courses/img2.png",
         "title": "Aptitude - Averages, Mixtures & Allegation",
         "price": "Free",
         "label": "Mock Test"
     },
     {
         "id": "3",
-        "image": "images/img3.png",
+        "image": "images/courses/img3.png",
         "title": "Aptitude - Simple & Compound Interest",
         "price": "Free",
         "label": "Mock Test"
     },
     {
         "id": "4",
-        "image": "images/img4.png",
+        "image": "images/courses/img4.png",
         "title": "Aptitude - Partnership",
         "price": "Free",
         "label": "Mock Test"
     },
     {
         "id": "5",
-        "image": "images/img5.png",
+        "image": "images/courses/img5.png",
         "title": "Aptitude - Time & Work",
         "price": "Free",
         "label": "Mock Test"
