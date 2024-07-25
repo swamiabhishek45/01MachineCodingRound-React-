@@ -11,16 +11,22 @@ A React project with three main tasks: OTP Form, Drag and Drop Course Cards, and
 
 ## 📝 OTP Form 
 
+### This is a React component named `OTPForm` that represents a mobile phone verification form with a 4-digit OTP input.  Here's a breakdown of what the code is doing:
+
 **Empty Form State:** A form to input a 4-digit OTP
+
 ![Verifiy](./public/images/OTPForm/img1.png)
 
 **Filling State:** The state during the input of the OTP
+
 ![Verifiy](./public/images/OTPForm/img2.png)
 
 **Filled State (Success):** The state when the OTP is correctly filled
+
 ![Verified](./public/images/OTPForm/img3.png)
 
 **Filled State (Error):** The state when the OTP is incorrectly filled
+
 ![Verification failed](./public/images/OTPForm/img4.png)
 
 ## 🫳🏻 Drag and Drop Cards
@@ -37,6 +43,8 @@ Each card should have actions for `Move to Top`, `Move to Bottom`, and `Remove`
 
 
 ## 📑 Data Table
+
+![Home Page](./public/images/Datatable//img.png)
 
 ## ⚙️ Project Setup
 

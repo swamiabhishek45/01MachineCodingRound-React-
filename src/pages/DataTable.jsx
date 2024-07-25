@@ -17,8 +17,6 @@ const DataTable = () => {
                         time.
                     </p>
 
-                
-
                     <PaginatedTable />
                 </div>
             </div>
