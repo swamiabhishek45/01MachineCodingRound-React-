@@ -1,5 +1,6 @@
 import React from "react";
 import Logo from "../assets/logo.png";
+import PaginatedTable from "../components/PaginatedTable";
 
 const DataTable = () => {
     return (
@@ -9,8 +10,16 @@ const DataTable = () => {
             </h1>
             <div className="flex flex-col md:flex-row gap-10 items-center justify-center w-full px-4">
                 {/* Container */}
-                <div className="bg-white w-full max-w-6xl h-[500px] rounded-lg shadow-lg p-5 ">
-                    <h2 className="text-2xl font-semibold">Manage Bundles</h2>
+                <div className="bg-[#f9f7f8] w-full max-w-6xl h-600px] rounded-lg shadow-lg p-10 ">
+                    <h2 className="text-2xl font-semibold">Batches</h2>
+                    <p className="text-[#000000a7]">
+                        Create learner’s batch and share information at the same
+                        time.
+                    </p>
+
+                
+
+                    <PaginatedTable />
                 </div>
             </div>
 

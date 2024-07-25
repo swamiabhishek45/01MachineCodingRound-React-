@@ -1,10 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-// #6e6eaa
-// bg-[#e2bbe8] 
-// text-[#454a7a]
-
 const Navbar = () => {
     return (
         <nav className="bg-gray-800 p-4">

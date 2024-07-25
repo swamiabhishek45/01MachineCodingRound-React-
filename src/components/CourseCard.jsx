@@ -1,8 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import { MdDragIndicator } from "react-icons/md";
 import { BsThreeDotsVertical } from "react-icons/bs";
-import { FaArrowUp } from "react-icons/fa6";
-import { FaArrowDown } from "react-icons/fa6";
+import { FaArrowUp, FaArrowDown } from "react-icons/fa6";
 import { RiDeleteBinLine } from "react-icons/ri";
 
 const CourseCard = ({
