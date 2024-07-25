@@ -41,9 +41,9 @@ const OTPForm = () => {
     };
 
     return (
-        <div className="bg-[#4072af] min-h-screen flex justify-center items-center flex-col">
+        <div className="bg-[#4072af] min-h-screen flex  items-center flex-col">
             {/* Header */}
-            <h1 className="text-5xl font-bold text-center mb-16 text-white">
+            <h1 className="text-5xl font-bold text-center m-10 text-white">
                 Chai aur Code
             </h1>
             <div className="bg-white w-full max-w-md rounded-lg shadow-lg p-6">
