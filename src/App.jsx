@@ -14,7 +14,6 @@ function App() {
     return (
         <Router>
             <div className="App">
-                <Navbar />
                 <Routes>
                     <Route path="/" element={<Navigate to="/otp-form" />} />
                     <Route path="/otp-form" exact element={<OTPForm />} />
